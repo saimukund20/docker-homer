@@ -22,9 +22,9 @@ RUN R -f /tmp/rpackages.R
 ## HOMER ##
 RUN mkdir /opt/homer/ && cd /opt/homer && wget http://homer.ucsd.edu/homer/configureHomer.pl && /usr/bin/perl configureHomer.pl -install 
 
-ENV PATH="${PATH}:/opt/homer/bin/"
-
 #use a softlink so that data gets off of unwritable dirs and points to my annotation directory
 RUN rm -rf /opt/homer/data
 RUN ln -s /gscmnt/gc6122/cancer-genomics/medseq/annotations/homer/data /opt/homer/data
+#same with config file that tells where the data is
+RUN rm -f /opt/homer/config.txt && ln -s /gscmnt/gc6122/cancer-genomics/medseq/annotations/homer/config.txt /opt/homer/config.txt
 
