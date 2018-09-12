@@ -4,8 +4,8 @@ MAINTAINER Chris Miller <c.a.miller@wustl.edu>
 LABEL Image for homer on the MGI cluster - uses cmiller-specific annotation directories
 
 #use a softlink so that data gets off of unwritable dirs and points to my annotation directory
-rm -rf /usr/local/share/homer-4.9.1-6/data
-ln -s /gscmnt/gc6122/cancer-genomics/medseq/annotations/homer/data /usr/local/share/homer-4.9.1-6/data
+RUN rm -rf /usr/local/share/homer-4.9.1-6/data
+RUN ln -s /gscmnt/gc6122/cancer-genomics/medseq/annotations/homer/data /usr/local/share/homer-4.9.1-6/data
 
 
 # needed for MGI data mounts
