@@ -1,4 +1,4 @@
-FROM quay.io/biocontainers/homer
+FROM quay.io/biocontainers/homer:4.9.1--pl526h2d50403_6
 MAINTAINER Chris Miller <c.a.miller@wustl.edu>
 
 LABEL Image for homer on the MGI cluster - uses cmiller-specific annotation directories
