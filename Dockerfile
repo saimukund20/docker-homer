@@ -28,3 +28,4 @@ RUN ln -s /gscmnt/gc6122/cancer-genomics/medseq/annotations/homer/data /opt/home
 #same with config file that tells where the data is
 RUN rm -f /opt/homer/config.txt && ln -s /gscmnt/gc6122/cancer-genomics/medseq/annotations/homer/config.txt /opt/homer/config.txt
 
+ENV PATH=${PATH}:/opt/homer/bin/
