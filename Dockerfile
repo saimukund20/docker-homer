@@ -4,7 +4,7 @@ MAINTAINER Chris Miller <c.a.miller@wustl.edu>
 LABEL Image for homer on the MGI cluster - uses cmiller-specific annotation directories
 
 #dependencies
-RUN apt-get update && apt-get install -y libnss-sss samtools r-base r-base-dev wget && apt-get clean all
+RUN apt-get update && apt-get install -y libnss-sss samtools r-base r-base-dev tabix wget && apt-get clean all
 
 # needed for MGI data mounts
 RUN apt-get update && apt-get install -y libnss-sss && apt-get clean all
